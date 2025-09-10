@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finish Mode AI – Automate with Custom AI Systems</title>
+  <meta name="description" content="Finish Mode AI helps businesses automate operations with custom-built AI solutions.">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base styles */
+    :root {
+      --navy: #0a192f;
+      --neon: #39ff14;
+      --slate: #8892b0;
+      --white: #f5f5f5;
+      --bg-dark: #0a192f;
+      --bg-light: #ffffff;
+      --text-dark: #f5f5f5;
+      --text-light: #0a192f;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body[data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body[data-theme="light"] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--navy);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--neon);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .cta-btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--neon);
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .features, .pricing {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .feature, .price-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--slate);
+      padding: 1.5rem;
+      border-radius: 8px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover, .price-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .process-steps {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      max-width: 200px;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    input, textarea {
+      padding: 0.5rem;
+      width: 100%;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--neon);
+      color: #000;
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      color: var(--neon);
+    }
+
+    iframe {
+      max-width: 100%;
+      width: 560px;
+      height: 315px;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .features, .pricing, .process-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><strong>Finish Mode AI</strong></div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <span class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-adjust"></i></span>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Automate Smarter with Finish Mode AI</h1>
+  <p>Custom-built AI systems that supercharge your business operations — from lead handling to backend automation.</p>
+  <a href="https://calendly.com" target="_blank"><button class="cta-btn">Book a Call</button></a>
+</section>
+
+<section id="features">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature"><i class="fas fa-robot fa-2x"></i><h3>AI Automation</h3><p>Tailored automations using LLMs and AI workflows.</p></div>
+    <div class="feature"><i class="fas fa-cogs fa-2x"></i><h3>System Integration</h3><p>Seamlessly connects with your tools and APIs.</p></div>
+    <div class="feature"><i class="fas fa-chart-line fa-2x"></i><h3>Performance Tracking</h3><p>Real-time insights from your automated systems.</p></div>
+  </div>
+</section>
+
+<section id="process">
+  <h2>How It Works</h2>
+  <div class="process-steps">
+    <div class="step"><h3>1. Discover</h3><p>We learn your business goals and processes.</p></div>
+    <div class="step"><h3>2. Design</h3><p>We craft custom AI workflows tailored to your needs.</p></div>
+    <div class="step"><h3>3. Deploy</h3><p>Launch and monitor automations for long-term success.</p></div>
+  </div>
+</section>
+
+<section id="video">
+  <h2>See Finish Mode AI in Action</h2>
+  <div style="text-align:center;">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>What Clients Say</h2>
+  <div class="testimonials">
+    <div class="testimonial"><p>“Finish Mode AI changed our operations forever. We save 20+ hours a week!”</p><strong>- Jane D., Tech Founder</strong></div>
+    <div class="testimonial"><p>“Their custom automations were exactly what we needed to scale.”</p><strong>- Mark T., COO</strong></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing">
+    <div class="price-card"><i class="fas fa-leaf fa-2x"></i><h3>Starter</h3><p>$999/mo</p><p>For early teams & solopreneurs</p></div>
+    <div class="price-card"><i class="fas fa-rocket fa-2x"></i><h3>Pro</h3><p>$2999/mo</p><p>Growing businesses needing full automation</p></div>
+    <div class="price-card"><i class="fas fa-crown fa-2x"></i><h3>Enterprise</h3><p>Custom</p><p>Bespoke solutions & priority support</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit" class="cta-btn">Send</button>
+    </form>
+    <br>
+    <div style="width:100%; max-width:600px;">
+      <iframe src="https://calendly.com" width="100%" height="630" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center; padding: 2rem;">&copy; 2025 Finish Mode AI. All rights reserved.</footer>
+
+<div id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></div>
+
+<script>
+  // Theme toggling
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  }
+
+  // Load saved theme
+  window.onload = function () {
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    }
+  }
+
+  // Back to top
+  const backBtn = document.getElementById('backToTop');
+  window.onscroll = function () {
+    if (window.scrollY > 300) {
+      backBtn.style.display = "block";
+    } else {
+      backBtn.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
